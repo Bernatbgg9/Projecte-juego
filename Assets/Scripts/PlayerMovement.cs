@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -27,11 +28,22 @@ public class PlayerMovement : MonoBehaviour
         Animator.SetFloat("Vertical", movement.y);
         Animator.SetFloat("Speed", movement.sqrMagnitude);
 
+       /* if (Input.GetKey(KeyCode.Space))
+        {
+            Animator.SetBool("Melee", true);
+        }
+        else
+        {
+            Animator.SetBool("Melee", false);
+        }*/
+
         //mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
     }
     private void FixedUpdate()
     {
         Rigidbody.MovePosition(Rigidbody.position +  movement.normalized * PlayerSpeed * Time.fixedDeltaTime);
+
+
         
 
         /*Vector2 direction = mousePosition - Rigidbody.position;
