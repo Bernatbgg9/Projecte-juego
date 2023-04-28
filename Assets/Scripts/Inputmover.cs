@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inputmover : MonoBehaviour
+public class InputMover : MonoBehaviour
 {
     // Start is called before the first frame update
     

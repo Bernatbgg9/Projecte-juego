@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemigo_mov : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
 
 

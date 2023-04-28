@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class minimapCamera : MonoBehaviour
+public class MinimapCamera : MonoBehaviour
 {
     public Transform player;
 
