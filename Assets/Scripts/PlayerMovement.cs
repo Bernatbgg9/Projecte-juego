@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody.MovePosition(Rigidbody.position +  movement.normalized * PlayerSpeed * Time.fixedDeltaTime);
-        
 
         /*Vector2 direction = mousePosition - Rigidbody.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;

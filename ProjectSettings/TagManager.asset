@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Teleporter
   - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
