@@ -7,9 +7,15 @@ public class FollowCamera : MonoBehaviour
     public Transform target;
 
     private Vector3 offset = new Vector3(0f, 0f, -1f);
-    public float smoothSpeed = 0.25f;
+    public float smoothSpeed = 5f;
     private Vector3 velocity = Vector3.zero;
     public Vector3 minValues, maxValues;
+
+
+    private void Update()
+    {
+            
+    }
 
     void FixedUpdate()
     {
@@ -21,10 +27,12 @@ public class FollowCamera : MonoBehaviour
             Mathf.Clamp(targetPosition.z, minValues.z, maxValues.z));
 
         //transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothSpeed);
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, boundPosition, smoothSpeed * Time.fixedDeltaTime);
-        transform.position = smoothedPosition;
+         Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, boundPosition, ref velocity,smoothSpeed);
+         transform.position = smoothedPosition;
         //transform.position = target.transform.position + new Vector3(0, 0, -1);
 
         
     }
+
+
 }

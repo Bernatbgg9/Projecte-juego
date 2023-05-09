@@ -32,9 +32,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        Animator.SetFloat("Horizontal", movement.x);
-        Animator.SetFloat("Vertical", movement.y);
-        Animator.SetFloat("Speed", movement.sqrMagnitude);
+        
 
         if (detectionZone.detectedObjs.Count > 0)
         {
@@ -42,23 +40,21 @@ public class EnemyMovement : MonoBehaviour
             moveDirection = direction;
         }
 
-        timeLeft -= Time.fixedDeltaTime;
-        if (timeLeft <= 0)
-        {
-            movement = new Vector2(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
-            timeLeft += accelerationTime;
-        }
+       
+        
     }
 
     void FixedUpdate()
     {
-
+        Animator.SetFloat("Horizontal", moveDirection.x);
+        Animator.SetFloat("Vertical", moveDirection.y);
+        Animator.SetFloat("Speed", moveDirection.sqrMagnitude);
         if (detectionZone.detectedObjs.Count > 0)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
 
-        rb.AddForce(movement * maxSpeed);
+       
     }
 
     /*public float speed;
