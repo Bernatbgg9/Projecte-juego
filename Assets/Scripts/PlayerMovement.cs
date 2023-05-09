@@ -6,22 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     public float PlayerSpeed = 1.5f;
     private float PlayerRun;
-    
-    
 
     public Rigidbody2D Rigidbody;
     private Camera Camera;
     public Animator Animator;
     
+    private Vector2 movement;
 
-    Vector2 movement;
-
-    Vector2 mousePosition;
+    private Vector2 mousePosition;
 
     private void Start()
     {
         Animator = GetComponent<Animator>();
-        
     }
     void Update()
     {

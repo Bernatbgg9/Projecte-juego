@@ -14,9 +14,11 @@ public class EnemyMovement : MonoBehaviour
 
     public DetectionZone detectionZone;
     Rigidbody2D rb;
+    public Animator Animator;
 
     void Start()
     {
+        Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -30,6 +32,10 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
+        Animator.SetFloat("Horizontal", movement.x);
+        Animator.SetFloat("Vertical", movement.y);
+        Animator.SetFloat("Speed", movement.sqrMagnitude);
+
         if (detectionZone.detectedObjs.Count > 0)
         {
             Vector3 direction = (detectionZone.detectedObjs[0].transform.position - transform.position).normalized;
@@ -46,6 +52,7 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         if (detectionZone.detectedObjs.Count > 0)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
@@ -53,8 +60,6 @@ public class EnemyMovement : MonoBehaviour
 
         rb.AddForce(movement * maxSpeed);
     }
-
-
 
     /*public float speed;
 
