@@ -542,6 +542,25 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1958704957588131538, guid: 8bae590dbfa2fea448a3deeedaf2d427, type: 3}
   m_PrefabInstance: {fileID: 1958704959221340812}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1272982339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1958704957588131537, guid: 8bae590dbfa2fea448a3deeedaf2d427, type: 3}
+  m_PrefabInstance: {fileID: 1958704959221340812}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1272982344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272982339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bab9d6bbe2c9f49aa85064dc4d3df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionZone: {fileID: 865045900}
+  moveSpeed: 1
 --- !u!1 &1395383129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,6 +1251,10 @@ PrefabInstance:
     - target: {fileID: 1958704957588131565, guid: 8bae590dbfa2fea448a3deeedaf2d427, type: 3}
       propertyPath: maxSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958704957588131565, guid: 8bae590dbfa2fea448a3deeedaf2d427, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1958704957588131565, guid: 8bae590dbfa2fea448a3deeedaf2d427, type: 3}
       propertyPath: moveSpeed

@@ -6,8 +6,6 @@ public class EnemyMovement : MonoBehaviour
 {
     public float accelerationTime = 3f;
     public float maxSpeed = 2f;
-    private Vector2 movement;
-    private float timeLeft;
 
     public float moveSpeed = 1f;
     Vector2 moveDirection;
@@ -26,35 +24,26 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall")
         {
-            movement = new Vector2(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
+            moveDirection = new Vector2(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
         }    
     }
 
     private void Update()
     {
-        
-
         if (detectionZone.detectedObjs.Count > 0)
         {
             Vector3 direction = (detectionZone.detectedObjs[0].transform.position - transform.position).normalized;
             moveDirection = direction;
         }
 
-       
-        
-    }
-
-    void FixedUpdate()
-    {
         Animator.SetFloat("Horizontal", moveDirection.x);
         Animator.SetFloat("Vertical", moveDirection.y);
         Animator.SetFloat("Speed", moveDirection.sqrMagnitude);
+
         if (detectionZone.detectedObjs.Count > 0)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
-
-       
     }
 
     /*public float speed;
