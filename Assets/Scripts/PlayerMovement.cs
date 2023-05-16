@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject BulletPrefab;
     public float PlayerSpeed = 1.5f;
     private float PlayerRun;
 
     public Rigidbody2D Rigidbody;
     private Camera Camera;
     public Animator Animator;
-    
+    private float LastShoot;
+
     private Vector2 movement;
 
     private Vector2 mousePosition;
@@ -31,7 +33,21 @@ public class PlayerMovement : MonoBehaviour
 
         //mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
 
+        if (Input.GetKey(KeyCode.Space) && Time.time > LastShoot + 0.25f)
+        {
+            Shoot();
+            LastShoot = Time.time;
+        }
 
+    }
+    private void Shoot()
+    {
+        Vector3 direction;
+        if (movement.x > 0.0f || movement.x == 0.0f) direction = Vector2.right;
+        else direction = Vector2.left;
+
+        GameObject bullet = Instantiate(BulletPrefab, transform.position + new Vector3(direction.x * 0.1f, -0.1f, 0.0f), Quaternion.identity);
+        bullet.GetComponent<BalaScript>().SetDirection(direction);
     }
     private void FixedUpdate()
     {

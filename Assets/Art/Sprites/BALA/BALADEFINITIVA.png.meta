@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8389e8441bfadb94cb228c930bdafb16
+guid: f412ed13b8d38394380df63d71f119f2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: disparo_0
+      name: BALADEFINITIVA_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 4
+        width: 5
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,19 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9be62a09d156e264293e881a0a4b7bc8
-      internalID: 1780007202
+      spriteID: b18b2a4b8e6385240a1718fb8ef776cf
+      internalID: 1570928263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: disparo_1
+      name: BALADEFINITIVA_1
       rect:
         serializedVersion: 2
-        x: 8
+        x: 9
         y: 0
-        width: 4
+        width: 5
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,19 +152,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba09e6b3dbc3da94998a34a9898e99b7
-      internalID: -374419633
+      spriteID: 7d54590a612441d48830a41b50549af4
+      internalID: 56952472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: disparo_2
+      name: BALADEFINITIVA_2
       rect:
         serializedVersion: 2
-        x: 13
+        x: 16
         y: 0
-        width: 4
+        width: 5
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,19 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de26c7e33fcba7146903eabf162b7c9f
-      internalID: 1524012597
+      spriteID: c015b74157fdf40448439ff627d72eca
+      internalID: -1873252241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: disparo_3
+      name: BALADEFINITIVA_3
       rect:
         serializedVersion: 2
-        x: 17
+        x: 25
         y: 0
-        width: 4
+        width: 5
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,8 +194,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a34122c6a310d46b7a87a0675dd0e7
-      internalID: 1921743632
+      spriteID: 66a589526de343e4dba61f51f37735f9
+      internalID: -1105227170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BALADEFINITIVA_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f7ec86cf4fa5440b4768f0d767eb71
+      internalID: -271255646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BALADEFINITIVA_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582037a00f5290644ae23ab4f6688253
+      internalID: -1283381270
       vertices: []
       indices: 
       edges: []
@@ -211,10 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      disparo_0: 1780007202
-      disparo_1: -374419633
-      disparo_2: 1524012597
-      disparo_3: 1921743632
+      BALADEFINITIVA_0: -146417557
+      BALADEFINITIVA_1: -453630338
+      BALADEFINITIVA_2: -508238690
+      BALADEFINITIVA_3: 712944803
+      BALADEFINITIVA_4: 1570928263
+      BALADEFINITIVA_5: 56952472
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
