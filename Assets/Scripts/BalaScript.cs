@@ -14,7 +14,6 @@ public class BalaScript : MonoBehaviour
         RigidBody2D = GetComponent<Rigidbody2D>();
     }
 
-
     private void FixedUpdate()
     {
         RigidBody2D.velocity = Direction * Speed;
