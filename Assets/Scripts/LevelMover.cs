@@ -11,7 +11,7 @@ public class LevelMover : MonoBehaviour
     // Move game to another scene
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("Trigger Entered");
+        //print("Trigger Entered");
 
         // Could use other.GetComponent<Player>() to see if the game object has a Player component
         // Tags work too. Maybe some players have different script components?
