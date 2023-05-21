@@ -22,7 +22,6 @@ public class EnemyAI : MonoBehaviour
     Rigidbody2D rb;
     public float moveSpeed;
     bool running = false;
-    private int Health = 4;
 
 
     private void Start()
@@ -120,14 +119,6 @@ public class EnemyAI : MonoBehaviour
         else
         {
             brain.ChangeState(EState.Idle);
-        }
-    }
-    public void Hit()
-    {
-        Health = Health - 1;
-        if (Health == 0)
-        {
-            Destroy(gameObject);
         }
     }
 
