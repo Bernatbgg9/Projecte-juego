@@ -9,6 +9,7 @@ public class Enemy2Movement : MonoBehaviour
     public float maxSpeed = 2f;
     private Vector2 movement;
     private float timeLeft;
+    private int Health = 3;
 
     public float moveSpeed = 1f;
     Vector2 moveDirection;
@@ -53,5 +54,13 @@ public class Enemy2Movement : MonoBehaviour
         }
 
         rb.AddForce(movement * maxSpeed);
+    }
+    public void Hit()
+    {
+        Health = Health - 1;
+        if (Health == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

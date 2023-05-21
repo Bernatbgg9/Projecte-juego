@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Camera Camera;
     public Animator Animator;
     private float LastShoot;
+    private int Health = 5;
 
     private Vector2 movement;
 
@@ -33,14 +34,14 @@ public class PlayerMovement : MonoBehaviour
 
         //mousePosition = Camera.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetKey(KeyCode.Space) && Time.time > LastShoot + 0.25f)
+       /* if (Input.GetKey(KeyCode.Space) && Time.time > LastShoot + 0.25f)
         {
             Shoot();
             LastShoot = Time.time;
-        }
+        }*/
 
     }
-    private void Shoot()
+    /*private void Shoot()
     {
         Vector3 direction;
         if (movement.x > 0.0f || movement.x == 0.0f) direction = Vector2.right;
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + new Vector3(direction.x * 0.1f, -0.1f, 0.0f), Quaternion.identity);
         bullet.GetComponent<BalaScript>().SetDirection(direction);
-    }
+    }*/
     private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.LeftShift))
@@ -65,5 +66,14 @@ public class PlayerMovement : MonoBehaviour
         /*Vector2 direction = mousePosition - Rigidbody.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         Rigidbody.rotation = angle; */
+    }
+    
+    public void Hit()
+    {
+        Health = Health - 1;
+        if (Health == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

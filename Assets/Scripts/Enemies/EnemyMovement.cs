@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
     public DetectionZone detectionZone;
     Rigidbody2D rb;
     public Animator Animator;
+    private int Health = 3;
 
     void Start()
     {
@@ -43,6 +44,14 @@ public class EnemyMovement : MonoBehaviour
         if (detectionZone.detectedObjs.Count > 0)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+        }
+    }
+    public void Hit()
+    {
+        Health = Health - 1;
+        if (Health == 0)
+        {
+            Destroy(gameObject);
         }
     }
 
