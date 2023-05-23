@@ -8,6 +8,8 @@ public class PlayerShooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet;
     public Transform bulletTransform;
+    private SpriteRenderer spriteRenderer;
+
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
@@ -15,6 +17,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        spriteRenderer = GameObject.FindGameObjectWithTag("Weapon").GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -24,6 +27,16 @@ public class PlayerShooting : MonoBehaviour
         Vector3 rotation = mousePos - transform.position;
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
+
+        if (rotZ >= 90 || rotZ <= -90)
+        {
+            spriteRenderer.flipY = true;
+        }
+
+        else
+        {
+            spriteRenderer.flipY = false;
+        }
 
         if (!canFire)
         {

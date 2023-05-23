@@ -10,6 +10,7 @@ public class TurretScript : MonoBehaviour
     public DetectionZone detectionZone;
 
     private float timer;
+    public float timeBetweenFiring;
 
     void Start()
     {
@@ -26,10 +27,10 @@ public class TurretScript : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer > 2)
+            if (timer > timeBetweenFiring)
             {
-                timer = 0;
                 Shoot();
+                timer = 0;
             }
         } 
     }

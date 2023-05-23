@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rb;

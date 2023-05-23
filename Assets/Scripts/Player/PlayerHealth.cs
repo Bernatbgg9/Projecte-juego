@@ -9,9 +9,11 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public Image healthBar;
 
+    public GameManagerScript gameManager;
+    private bool isDead;
     void Start()
     {
-        maxHealth = health;
+        health = maxHealth;
     }
 
     private void Update()
@@ -23,9 +25,11 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= amount;
 
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
-            Destroy(gameObject);
+            isDead = true;
+            gameObject.SetActive(false);
+            gameManager.GameOver();
         }
     }
 }

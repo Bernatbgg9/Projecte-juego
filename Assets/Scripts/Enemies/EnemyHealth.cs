@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 2;
-    public int currentHealth;
+    public float maxHealth = 2;
+    public float currentHealth;
+    public EnemyHealthBar healthBar;
 
     void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth, maxHealth);
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         currentHealth -= amount;
+        healthBar.SetHealth(currentHealth, maxHealth);
 
         if (currentHealth <= 0)
         {
