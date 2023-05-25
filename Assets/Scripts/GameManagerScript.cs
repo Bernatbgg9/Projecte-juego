@@ -6,31 +6,48 @@ using UnityEngine.SceneManagement;
 public class GameManagerScript : MonoBehaviour
 {
     public GameObject gameOverUI;
+    public GameObject gamePausedUI;
+
+    private bool isPaused = false;
 
     void Start()
     {
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     void Update()
     {
-        /*if (gameOverUI.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
+            if (!isPaused)
+            {
+                Pause();
+            }
 
-        else
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }*/
+            else
+            {
+                Resume();
+            }
+        }
     }
 
     public void GameOver()
     {
         gameOverUI.SetActive(true);
+    }
+
+    public void Pause()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        gamePausedUI.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+        gamePausedUI.SetActive(false);
     }
 
     public void Restart()
