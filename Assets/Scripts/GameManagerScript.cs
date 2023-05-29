@@ -7,6 +7,9 @@ public class GameManagerScript : MonoBehaviour
 {
     public GameObject gameOverUI;
     public GameObject gamePausedUI;
+    public GameObject pauseButton;
+    public GameObject healthBar;
+    public GameObject minimap;
 
     private bool isPaused = false;
 
@@ -41,6 +44,9 @@ public class GameManagerScript : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0f;
         gamePausedUI.SetActive(true);
+        pauseButton.SetActive(false);
+        minimap.SetActive(false);
+        healthBar.SetActive(false);
     }
 
     public void Resume()
@@ -48,6 +54,9 @@ public class GameManagerScript : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f;
         gamePausedUI.SetActive(false);
+        pauseButton.SetActive(true);
+        minimap.SetActive(true);
+        healthBar.SetActive(true);
     }
 
     public void Restart()

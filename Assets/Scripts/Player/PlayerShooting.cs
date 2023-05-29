@@ -49,6 +49,16 @@ public class PlayerShooting : MonoBehaviour
             }
         }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            AudioManager.PlaySFX("Machinegun");
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            AudioManager.StopSFX("Machinegun");
+        }
+
         if (Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
