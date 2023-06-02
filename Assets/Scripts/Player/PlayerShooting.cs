@@ -49,19 +49,20 @@ public class PlayerShooting : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
-            AudioManager.PlaySFX("Machinegun");
+            AudioManager.PlaySFX("M4");
         }
 
         if (Input.GetMouseButtonUp(0))
         {
-            AudioManager.StopSFX("Machinegun");
-        }
+            AudioManager.StopSFX("M4");
+        }*/
 
         if (Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
+            AudioManager.PlaySFX("M4");
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
     }

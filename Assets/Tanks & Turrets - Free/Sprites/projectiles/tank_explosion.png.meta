@@ -159,7 +159,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -196,7 +196,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -251,6 +251,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -258,10 +270,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1772
-        width: 300
-        height: 276
+        x: 59
+        y: 1803
+        width: 177
+        height: 194
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +291,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 1772
-        width: 300
-        height: 276
+        x: 352
+        y: 1803
+        width: 184
+        height: 194
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +312,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 1772
-        width: 300
-        height: 276
+        x: 632
+        y: 1793
+        width: 205
+        height: 233
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,10 +333,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_3
       rect:
         serializedVersion: 2
-        x: 900
-        y: 1772
-        width: 300
-        height: 276
+        x: 932
+        y: 1794
+        width: 246
+        height: 232
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,10 +354,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_4
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 1772
-        width: 300
-        height: 276
+        x: 1228
+        y: 1791
+        width: 249
+        height: 241
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +375,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_5
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1772
-        width: 300
-        height: 276
+        x: 1527
+        y: 1791
+        width: 259
+        height: 242
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +396,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1496
-        width: 300
-        height: 276
+        x: 19
+        y: 1514
+        width: 267
+        height: 249
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +417,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_7
       rect:
         serializedVersion: 2
-        x: 300
-        y: 1496
-        width: 300
-        height: 276
+        x: 318
+        y: 1514
+        width: 282
+        height: 249
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,10 +438,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_8
       rect:
         serializedVersion: 2
-        x: 600
-        y: 1496
-        width: 300
-        height: 276
+        x: 618
+        y: 1515
+        width: 282
+        height: 242
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +459,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_9
       rect:
         serializedVersion: 2
-        x: 900
-        y: 1496
-        width: 300
-        height: 276
+        x: 918
+        y: 1515
+        width: 263
+        height: 241
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,10 +480,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_10
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 1496
-        width: 300
-        height: 276
+        x: 1211
+        y: 1516
+        width: 269
+        height: 231
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,10 +501,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_11
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1496
-        width: 300
-        height: 276
+        x: 1512
+        y: 1516
+        width: 271
+        height: 231
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -510,10 +522,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1220
-        width: 300
-        height: 276
+        x: 14
+        y: 1243
+        width: 270
+        height: 229
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,10 +543,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_13
       rect:
         serializedVersion: 2
-        x: 300
-        y: 1220
-        width: 300
-        height: 276
+        x: 315
+        y: 1243
+        width: 270
+        height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,10 +564,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_14
       rect:
         serializedVersion: 2
-        x: 600
-        y: 1220
-        width: 300
-        height: 276
+        x: 610
+        y: 1267
+        width: 275
+        height: 206
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -573,10 +585,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_15
       rect:
         serializedVersion: 2
-        x: 900
-        y: 1220
-        width: 300
-        height: 276
+        x: 907
+        y: 1267
+        width: 278
+        height: 206
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,9 +607,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1200
-        y: 1220
-        width: 300
-        height: 276
+        y: 1269
+        width: 285
+        height: 199
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,9 +628,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1500
-        y: 1220
-        width: 300
-        height: 276
+        y: 1269
+        width: 284
+        height: 199
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,10 +648,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 944
-        width: 300
-        height: 276
+        x: 5
+        y: 963
+        width: 295
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -658,9 +670,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 300
-        y: 944
-        width: 300
-        height: 276
+        y: 961
+        width: 286
+        height: 193
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +690,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_20
       rect:
         serializedVersion: 2
-        x: 600
-        y: 944
-        width: 300
-        height: 276
+        x: 604
+        y: 995
+        width: 285
+        height: 194
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,10 +711,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_21
       rect:
         serializedVersion: 2
-        x: 900
-        y: 944
-        width: 300
-        height: 276
+        x: 903
+        y: 994
+        width: 286
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -721,9 +733,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1200
-        y: 944
-        width: 300
-        height: 276
+        y: 996
+        width: 289
+        height: 193
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,10 +753,10 @@ TextureImporter:
       name: explosion_atlas_2048_300x276_23
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 944
-        width: 300
-        height: 276
+        x: 1503
+        y: 997
+        width: 286
+        height: 192
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,48 +1033,49 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      explosion_atlas_2048_300x276_33: 2959961166338097911
-      explosion_atlas_2048_300x276_12: -4234136312714535456
-      explosion_atlas_2048_300x276_39: -4741796954759250769
-      explosion_atlas_2048_300x276_10: 5568676633920634950
-      explosion_atlas_2048_300x276_22: 193280708858916258
-      explosion_atlas_2048_300x276_3: 8172214488307087720
-      explosion_atlas_2048_300x276_25: -3366667425949524619
-      explosion_atlas_2048_300x276_24: 7390459188559773648
-      explosion_atlas_2048_300x276_35: -8731388617705495660
-      explosion_atlas_2048_300x276_38: -9054549955272115068
-      explosion_atlas_2048_300x276_1: -7511029745304030051
-      explosion_atlas_2048_300x276_18: 5038846799053680165
-      explosion_atlas_2048_300x276_27: 9042657889263732995
-      explosion_atlas_2048_300x276_4: -7937416551588837220
-      explosion_atlas_2048_300x276_14: -7208924769066407671
-      explosion_atlas_2048_300x276_17: -7797292234964580621
-      explosion_atlas_2048_300x276_5: -5026243130459436935
-      explosion_atlas_2048_300x276_20: 5512401309013069626
-      explosion_atlas_2048_300x276_30: 138597310282344246
-      explosion_atlas_2048_300x276_26: -1925559478674126526
-      explosion_atlas_2048_300x276_32: 2962680223271098923
-      explosion_atlas_2048_300x276_7: -6090589482342004440
-      explosion_atlas_2048_300x276_19: -2230686400617143937
-      explosion_atlas_2048_300x276_29: -5148046817726305766
-      explosion_atlas_2048_300x276_2: -9004298803897707695
-      explosion_atlas_2048_300x276_31: -5905906710458904090
-      explosion_atlas_2048_300x276_40: -4203818526484550736
       explosion_atlas_2048_300x276_0: -6334233623064323556
+      explosion_atlas_2048_300x276_1: -7511029745304030051
+      explosion_atlas_2048_300x276_10: 5568676633920634950
       explosion_atlas_2048_300x276_11: 398411717453499181
+      explosion_atlas_2048_300x276_12: -4234136312714535456
       explosion_atlas_2048_300x276_13: 6938763672414290143
-      explosion_atlas_2048_300x276_16: -3865882826045075006
-      explosion_atlas_2048_300x276_23: -1118975303068139951
-      explosion_atlas_2048_300x276_21: -7488518440829292254
-      explosion_atlas_2048_300x276_8: -3326432308194813605
-      explosion_atlas_2048_300x276_28: 5134893897256147896
-      explosion_atlas_2048_300x276_37: -3115641436899638125
-      explosion_atlas_2048_300x276_9: 8101737630172614195
-      explosion_atlas_2048_300x276_6: 6638995473195133164
-      explosion_atlas_2048_300x276_41: 2851898651835959549
-      explosion_atlas_2048_300x276_34: -5612735743748309769
+      explosion_atlas_2048_300x276_14: -7208924769066407671
       explosion_atlas_2048_300x276_15: 4948953555652905894
+      explosion_atlas_2048_300x276_16: -3865882826045075006
+      explosion_atlas_2048_300x276_17: -7797292234964580621
+      explosion_atlas_2048_300x276_18: 5038846799053680165
+      explosion_atlas_2048_300x276_19: -2230686400617143937
+      explosion_atlas_2048_300x276_2: -9004298803897707695
+      explosion_atlas_2048_300x276_20: 5512401309013069626
+      explosion_atlas_2048_300x276_21: -7488518440829292254
+      explosion_atlas_2048_300x276_22: 193280708858916258
+      explosion_atlas_2048_300x276_23: -1118975303068139951
+      explosion_atlas_2048_300x276_24: 7390459188559773648
+      explosion_atlas_2048_300x276_25: -3366667425949524619
+      explosion_atlas_2048_300x276_26: -1925559478674126526
+      explosion_atlas_2048_300x276_27: 9042657889263732995
+      explosion_atlas_2048_300x276_28: 5134893897256147896
+      explosion_atlas_2048_300x276_29: -5148046817726305766
+      explosion_atlas_2048_300x276_3: 8172214488307087720
+      explosion_atlas_2048_300x276_30: 138597310282344246
+      explosion_atlas_2048_300x276_31: -5905906710458904090
+      explosion_atlas_2048_300x276_32: 2962680223271098923
+      explosion_atlas_2048_300x276_33: 2959961166338097911
+      explosion_atlas_2048_300x276_34: -5612735743748309769
+      explosion_atlas_2048_300x276_35: -8731388617705495660
       explosion_atlas_2048_300x276_36: -614628339926983327
+      explosion_atlas_2048_300x276_37: -3115641436899638125
+      explosion_atlas_2048_300x276_38: -9054549955272115068
+      explosion_atlas_2048_300x276_39: -4741796954759250769
+      explosion_atlas_2048_300x276_4: -7937416551588837220
+      explosion_atlas_2048_300x276_40: -4203818526484550736
+      explosion_atlas_2048_300x276_41: 2851898651835959549
+      explosion_atlas_2048_300x276_5: -5026243130459436935
+      explosion_atlas_2048_300x276_6: 6638995473195133164
+      explosion_atlas_2048_300x276_7: -6090589482342004440
+      explosion_atlas_2048_300x276_8: -3326432308194813605
+      explosion_atlas_2048_300x276_9: 8101737630172614195
+      tank_explosion_0: 1330532078
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

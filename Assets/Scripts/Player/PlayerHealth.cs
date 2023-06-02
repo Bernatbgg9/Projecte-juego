@@ -7,12 +7,18 @@ public class PlayerHealth : MonoBehaviour
 {
     public float health;
     public float maxHealth;
-    public Image healthBar;
 
+    public Image healthBar;
+    public Animator Animator;
     public GameManagerScript gameManager;
+    public GameObject weapon;
+
     private bool isDead;
+
     void Start()
     {
+        Animator = GetComponent<Animator>();
+
         health = maxHealth;
     }
 
@@ -28,8 +34,16 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0 && !isDead)
         {
             isDead = true;
+            weapon.SetActive(false);
             gameObject.SetActive(false);
             gameManager.GameOver();
+            //Animator.SetTrigger("Death");
         }
     }
+
+    /*public void Death()
+    {
+        gameObject.SetActive(false);
+        gameManager.GameOver();
+    }*/
 }

@@ -22,7 +22,7 @@ public class BulletScript : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * speed;
 
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rotZ + 180);
+        transform.rotation = Quaternion.Euler(0, 0, rotZ + 270);
     }
 
     private void Update()

@@ -13,11 +13,6 @@ public class GameManagerScript : MonoBehaviour
 
     private bool isPaused = false;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -37,6 +32,9 @@ public class GameManagerScript : MonoBehaviour
     public void GameOver()
     {
         gameOverUI.SetActive(true);
+        pauseButton.SetActive(false);
+        minimap.SetActive(false);
+        healthBar.SetActive(false);
     }
 
     public void Pause()
@@ -61,6 +59,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
