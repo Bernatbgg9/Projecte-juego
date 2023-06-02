@@ -37,4 +37,9 @@ public class EnemyHealth : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void TurretSound()
+    {
+        AudioManager.PlaySFX("TurretExplosion");
+    }
 }

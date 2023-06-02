@@ -8609,6 +8609,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
     Volume: 0.5
     Type: 1
+  - Name: TurretExplosion
+    Clips:
+    - {fileID: 8300000, guid: 6a4fa2507ac9b9544ad4d0ff45d24260, type: 3}
+    Volume: 0.2
+    Type: 1
   MusicSource: {fileID: 904723825}
   SFXSource: {fileID: 1654134302}
   AudioMixer: {fileID: 24100000, guid: ae19ce92df848f14998d78145dd5111e, type: 2}
@@ -31912,7 +31917,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -34251,11 +34256,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2006835600}
-  - component: {fileID: 2006835606}
-  - component: {fileID: 2006835603}
   - component: {fileID: 2006835605}
   - component: {fileID: 2006835604}
+  - component: {fileID: 2006835603}
   - component: {fileID: 2006835607}
+  - component: {fileID: 2006835608}
   m_Layer: 0
   m_Name: TurretEnemy1
   m_TagString: Enemy
@@ -34296,7 +34301,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   healthBar: {fileID: 1189373633}
-  Animator: {fileID: 2006835606}
+  Animator: {fileID: 0}
   Bar: {fileID: 1140923037}
 --- !u!61 &2006835604
 BoxCollider2D:
@@ -34315,8 +34320,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.67, y: 2.49}
-    newSize: {x: 1.84, y: 1.94}
+    oldSize: {x: 2.69, y: 2.31}
+    newSize: {x: 1.77, y: 1.94}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -34345,27 +34350,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &2006835606
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006835598}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be29bbccba9f69b4c92b914957ac221a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &2006835607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34406,18 +34390,39 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.84, y: 1.94}
+  m_Size: {x: 1.77, y: 1.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2006835608
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006835598}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be29bbccba9f69b4c92b914957ac221a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2009031802
 GameObject:
   m_ObjectHideFlags: 0
