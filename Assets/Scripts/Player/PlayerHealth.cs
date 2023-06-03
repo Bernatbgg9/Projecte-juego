@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
+        AudioManager.PlaySFX("PlayerHit");
 
         if (health <= 0 && !isDead)
         {

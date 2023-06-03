@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
+using static UnityEditor.Progress;
 using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
@@ -15,14 +16,17 @@ public class AudioManager : MonoBehaviour
     public AudioFile[] MusicFiles => AudioFiles.Where(x => x.Type == AudioType.Music).ToArray();
 
     public AudioSource MusicSource;
-    public AudioSource SFXSource;
+
+    //public AudioSource Player;
+
+    public List<AudioSource> AudioSourcesSfx;
 
     public AudioMixer AudioMixer;
 
     [Range(0, 1)]
-    public float GlobalMusicVolume=1;
+    public float GlobalMusicVolume = 1;
     [Range(0, 1)]
-    public float GlobalSFXVolume=1;
+    public float GlobalSFXVolume = 1;
 
     private void Awake()
     {
@@ -44,6 +48,7 @@ public class AudioManager : MonoBehaviour
     public static void PlaySFX(string name)
     {
         Instance._PlaySFX(name);
+
     }
 
     public static void PlaySFX(string name, AudioSource audioSource)
@@ -56,15 +61,15 @@ public class AudioManager : MonoBehaviour
         Instance._StopSFX(name);
     }
 
-    public static void StopSFX(string name, AudioSource audioSource)
+    public static bool IsSoundPlaying(string name)
     {
-        Instance._StopSFX(name, audioSource);
+        return Instance._IsSoundPlaying(name);
     }
 
     private void _PlayMusic(string name)
     {
         var clip = GetFileByName(name);
-        if (clip!= null)
+        if (clip != null)
         {
             float vol = GlobalMusicVolume * clip.Volume;
             MusicSource.volume = vol;
@@ -77,6 +82,18 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void _StopSFX(string name)
+    {
+        foreach (AudioSource audio in AudioSourcesSfx)
+        {
+            if (audio.clip != null && audio.clip.name == name && audio.isPlaying)
+            {
+                audio.Stop();
+
+            }
+        }
+    }
+
     private void _PlayRandomMusic()
     {
         var musics = MusicFiles;
@@ -86,18 +103,36 @@ public class AudioManager : MonoBehaviour
 
     private void _PlaySFX(string name)
     {
+        AudioSource currentAudioSource = null;
+
+        foreach (AudioSource audio in AudioSourcesSfx)
+        {
+            if (!audio.isPlaying)
+            {
+                currentAudioSource = audio;
+                break;
+            }
+
+        }
+
+        if (currentAudioSource == null)
+        {
+            return;
+        }
+
         var clip = GetFileByName(name);
         if (clip != null)
         {
             float vol = GlobalSFXVolume * clip.Volume;
-            SFXSource.volume = vol;
-            SFXSource.clip = clip.Clip;
-            SFXSource.outputAudioMixerGroup = AudioMixer.FindMatchingGroups(name).Length >0 ?
+            currentAudioSource.volume = vol;
+            currentAudioSource.clip = clip.Clip;
+            currentAudioSource.outputAudioMixerGroup = AudioMixer.FindMatchingGroups(name).Length > 0 ?
                    AudioMixer.FindMatchingGroups(name)[0] :
                    AudioMixer.FindMatchingGroups("Sfx")[0];
 
-            SFXSource.Play();
+            currentAudioSource.Play();
         }
+
         else
         {
             Debug.LogError(" No such audio file " + name);
@@ -106,10 +141,12 @@ public class AudioManager : MonoBehaviour
 
     private void _PlaySFX(string name, AudioSource audioSource)
     {
+        if (audioSource.isPlaying) return;
+
         var clip = GetFileByName(name);
         if (clip != null)
         {
-            float vol = GlobalSFXVolume * clip.Volume;         
+            float vol = GlobalSFXVolume * clip.Volume;
             audioSource.outputAudioMixerGroup = AudioMixer.FindMatchingGroups(name).Length > 0 ?
                     AudioMixer.FindMatchingGroups(name)[0] :
                     AudioMixer.FindMatchingGroups("Sfx")[0];
@@ -123,19 +160,22 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void _StopSFX(string name)
-    {
-        SFXSource.Stop();
-    }
-
-    private void _StopSFX(string name, AudioSource audioSource)
-    {
-        audioSource.Stop();
-    }
-
     private AudioFile GetFileByName(string name)
     {
-       return AudioFiles.First(x => x.Name == name);
+        return AudioFiles.First(x => x.Name == name);
+    }
+
+    private bool _IsSoundPlaying(string name)
+    {
+        foreach (AudioSource audio in AudioSourcesSfx)
+        {
+            if (audio.clip != null && audio.clip.name == name && audio.isPlaying)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
 
@@ -149,7 +189,7 @@ public class AudioFile
     public float Volume;
     public AudioType Type;
 
-   
+
 
 
 }
