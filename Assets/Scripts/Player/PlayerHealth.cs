@@ -35,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0 && !isDead)
         {
             isDead = true;
+            AudioManager.PlaySFX("PlayerDeath");
             weapon.SetActive(false);
             gameObject.SetActive(false);
             gameManager.GameOver();

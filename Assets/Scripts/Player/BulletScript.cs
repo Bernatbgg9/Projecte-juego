@@ -42,5 +42,10 @@ public class BulletScript : MonoBehaviour
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -6,21 +6,40 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator Animator;
+    [SerializeField] private ParticleSystem Dust;
+    public AudioSource Steps;
+
     public float PlayerSpeed = 1.5f;
     private float PlayerRun;
     private Vector2 movement;
     internal int moveInput;
-    [SerializeField] private ParticleSystem particulas;
+    
 
     private void Start()
     {
         Animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        Steps = GetComponent<AudioSource>();
+
+        AudioManager.PlayRandomMusic();
     }
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (movement.sqrMagnitude > 0.1)
+        {
+            if (!Steps.isPlaying)
+            {
+                Steps.Play();
+            }
+        }
+        else
+        {
+          Steps.Stop();
+        }
 
         Animator.SetFloat("Horizontal", movement.x);
         Animator.SetFloat("Vertical", movement.y);
@@ -30,20 +49,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Correr();
+        Run();
     }
 
-    private void Correr()
+    private void Run()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
             rb.MovePosition(rb.position + movement.normalized* PlayerRun * Time.fixedDeltaTime);
-            particulas.Play();
+            Dust.Play();
         }
         else
         {
-        rb.MovePosition(rb.position + movement.normalized * PlayerSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + movement.normalized * PlayerSpeed * Time.fixedDeltaTime);
         }
-
     }
 }
