@@ -10,12 +10,23 @@ public class LevelMover : MonoBehaviour
     public Vector2 playerPos;
     public VectorValue playerStorage;
 
+    public Animator transitionAnim;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            playerStorage.initialValue = playerPos; 
-            SceneManager.LoadScene(sceneToLoad /*, LoadSceneMode.Single*/);
+            playerStorage.initialValue = playerPos;
+            StartCoroutine(LoadScene());
         }
+    }
+
+    IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("End");
+
+        yield return new WaitForSeconds(1.5f);
+
+        SceneManager.LoadSceneAsync(sceneToLoad /*, LoadSceneMode.Single*/);
     }
 }
