@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     public EnemyHealthBar healthBar;
     public Animator Animator;
     public GameObject Bar;
+    public CameraShake cameraShake;
 
     void Start()
     {
@@ -46,5 +47,10 @@ public class EnemyHealth : MonoBehaviour
     public void TurretSound()
     {
         AudioManager.PlaySFX("TurretExplosion");
+    }
+
+    public void ShakeExplosion()
+    {
+        StartCoroutine(cameraShake.Shake(0.15f, 0.25f));
     }
 }

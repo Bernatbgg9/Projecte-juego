@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator Animator;
     [SerializeField] private ParticleSystem Dust;
     public AudioSource Steps;
+    public VectorValue startingPos;
 
     public float PlayerSpeed = 1.5f;
     private float PlayerRun;
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
         Steps = GetComponent<AudioSource>();
 
         AudioManager.PlayRandomMusic();
+
+        transform.position = startingPos.initialValue;
     }
 
     void Update()

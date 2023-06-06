@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class LevelMover : MonoBehaviour
 {
-    public int sceneBuildIndex;
+    //public int sceneBuildIndex;
+    public string sceneToLoad;
+    public Vector2 playerPos;
+    public VectorValue playerStorage;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Could use other.GetComponent<Player>() to see if the game object has a Player component
         if (other.tag == "Player")
         {
-            // Player entered, so move level
-            print("Switching Scene to " + sceneBuildIndex);
-            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            playerStorage.initialValue = playerPos; 
+            SceneManager.LoadScene(sceneToLoad /*, LoadSceneMode.Single*/);
         }
     }
 }

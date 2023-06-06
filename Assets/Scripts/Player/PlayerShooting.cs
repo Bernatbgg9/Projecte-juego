@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bullet;
     public Transform bulletTransform;
     private SpriteRenderer spriteRenderer;
+    //[SerializeField] private ParticleSystem ShootParticle;
 
     public bool canFire;
     private float timer;
@@ -49,19 +50,10 @@ public class PlayerShooting : MonoBehaviour
             }
         }
 
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            AudioManager.PlaySFX("M4");
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            AudioManager.StopSFX("M4");
-        }*/
-
         if (Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
+            //ShootParticle.Play();
             AudioManager.PlaySFX("M4");
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }

@@ -12,9 +12,9 @@ public class FollowCamera : MonoBehaviour
     public Vector3 minValues, maxValues;
 
 
-    private void Update()
+    void Start()
     {
-            
+        transform.position = target.position;
     }
 
     void FixedUpdate()
