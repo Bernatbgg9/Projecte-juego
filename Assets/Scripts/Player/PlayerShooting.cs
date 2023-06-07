@@ -8,7 +8,8 @@ public class PlayerShooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet;
     public Transform bulletTransform;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer weapon;
+    public Animator Animator;
     //[SerializeField] private ParticleSystem ShootParticle;
 
     public bool canFire;
@@ -18,7 +19,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        spriteRenderer = GameObject.FindGameObjectWithTag("Weapon").GetComponent<SpriteRenderer>();
+        weapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -31,12 +32,12 @@ public class PlayerShooting : MonoBehaviour
 
         if (rotZ >= 90 || rotZ <= -90)
         {
-            spriteRenderer.flipY = true;
+            weapon.flipY = true;
         }
 
         else
         {
-            spriteRenderer.flipY = false;
+            weapon.flipY = false;
         }
 
         if (!canFire)
@@ -53,9 +54,10 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
-            //ShootParticle.Play();
+            Animator.SetTrigger("Flash");
             AudioManager.PlaySFX("M4");
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            Animator.SetTrigger("NoFlash");
         }
     }
 }
