@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
-    public static float scoreValue = 1000;
+    public static float scoreValue = 500;
     public float scoreDecreasePerSecond; 
 
     Text score;
@@ -13,7 +13,7 @@ public class PlayerScore : MonoBehaviour
     private void Start()
     {
         score = GetComponent<Text>();
-        scoreDecreasePerSecond = 1;
+        scoreDecreasePerSecond = 2;
     }
 
     private void Update()

@@ -8,7 +8,6 @@ public class EnemyAI : MonoBehaviour
 {
     enum EState
     {
-        //Idle,
         Wander,
         Follow,
         Attack
@@ -20,7 +19,6 @@ public class EnemyAI : MonoBehaviour
     public DetectionZone detectionZone;
     Animator Animator;
     Rigidbody2D rb;
-    public GameObject attackPoint;
     public LayerMask players;
     public float moveSpeed;
     bool running = false;
@@ -53,7 +51,7 @@ public class EnemyAI : MonoBehaviour
         //brain.SetOnStay(EState.Idle, IdleUpdate);
         brain.SetOnStay(EState.Wander, WanderUpdate);
         brain.SetOnStay(EState.Follow, FollowUpdate);
-        //brain.SetOnStay(EState.Attack, AttackUpdate);
+        brain.SetOnStay(EState.Attack, AttackUpdate);
 
         /*brain.SetOnExit(EState.Follow, () =>
         {
@@ -129,6 +127,11 @@ public class EnemyAI : MonoBehaviour
         if (detectionZone.detectedObjs.Count > 0)
         {
             rb.velocity = new Vector3(direction.x, direction.y) * moveSpeed;
+
+            if (Vector3.Distance(player.position, transform.position) <= 0.3)
+            {
+                brain.ChangeState(EState.Attack);
+            }
         }
 
         else
@@ -137,34 +140,29 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    /*void AttackUpdate()
+    void AttackUpdate()
     {
-        Vector3 moveDirection = (player.transform.position - transform.position).normalized;
-        direction = moveDirection;
+        StartCoroutine(AttackCo());
 
-        Collider2D[] playerCollider = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, players);
-
-        if (moveDirection.x < 0.3)
-        {
-            foreach (Collider2D playerGameObject in playerCollider)
-            {
-                Debug.Log("Player hit");
-            }
-        }
-
-        if (detectionZone.detectedObjs.Count > 0)
-        {
-            brain.ChangeState(EState.Follow);
-        }
-        
-        else
+        if (detectionZone.detectedObjs.Count < 0)
         {
             brain.ChangeState(EState.Wander);
         }
-    }*/
+    }
 
-    private void OnDrawGizmos()
+    IEnumerator AttackCo()
     {
-        Gizmos.DrawWireSphere(attackPoint.transform.position, radius);
+        Animator.SetBool("isAttacking", true);
+        yield return new WaitForSeconds(0.5f);
+        brain.ChangeState(EState.Wander);
+        Animator.SetBool("isAttacking", false);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+        }
     }
 }

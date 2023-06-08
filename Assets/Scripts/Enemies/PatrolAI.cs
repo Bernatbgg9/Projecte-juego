@@ -41,6 +41,7 @@ public class PatrolAI : MonoBehaviour
 
         brain.SetOnStay(EState.Patrol, PatrolUpdate);
         brain.SetOnStay(EState.Follow, FollowUpdate);
+        brain.SetOnStay(EState.Attack, AttackUpdate);
 
         brain.SetOnExit(EState.Follow, () =>
         {
@@ -111,11 +112,42 @@ public class PatrolAI : MonoBehaviour
         if (detectionZone.detectedObjs.Count > 0)
         {
             rb.velocity = new Vector2(direction.x, direction.y) * moveSpeed;
+
+            if (Vector3.Distance(player.position, transform.position) <= 0.3)
+            {
+                brain.ChangeState(EState.Attack);
+            }
         }
 
         else
         {
             brain.ChangeState(EState.Patrol);
+        }
+    }
+
+    void AttackUpdate()
+    {
+        StartCoroutine(AttackCo());
+
+        if (detectionZone.detectedObjs.Count < 0)
+        {
+            brain.ChangeState(EState.Patrol);
+        }
+    }
+
+    IEnumerator AttackCo()
+    {
+        Animator.SetBool("isAttacking", true);
+        yield return new WaitForSeconds(0.5f);
+        brain.ChangeState(EState.Patrol);
+        Animator.SetBool("isAttacking", false);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
         }
     }
 }
