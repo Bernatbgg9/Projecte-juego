@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -26,8 +27,18 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= amount;
         healthBar.SetHealth(currentHealth, maxHealth);
 
-        if (currentHealth < 0 && !isDead)
+        if (currentHealth <= 0 && !isDead)
         {
+            if (gameObject.CompareTag("Turret"))
+            {
+                PlayerScore.scoreValue += 100;
+            }
+
+            if (gameObject.CompareTag("Enemy"))
+            {
+                PlayerScore.scoreValue += 50;
+            }
+            
             isDead = true;
             Bar.SetActive(false);
             Animator.SetTrigger("Death");

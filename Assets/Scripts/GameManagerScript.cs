@@ -10,6 +10,7 @@ public class GameManagerScript : MonoBehaviour
     public GameObject pauseButton;
     public GameObject healthBar;
     public GameObject minimap;
+    public GameObject player;
 
     private bool isPaused = false;
 
@@ -59,17 +60,20 @@ public class GameManagerScript : MonoBehaviour
 
     public void Restart()
     {
+        player.GetComponent<PlayerHealth>().HealDamage();
+        PlayerScore.scoreValue = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MenuInic");
+        SceneManager.LoadScene("InicMenu");
     }
 
     public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("InicMenu");
+        //Application.Quit();
     }
 }

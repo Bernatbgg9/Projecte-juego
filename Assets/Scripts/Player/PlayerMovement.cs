@@ -13,9 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float PlayerSpeed = 1.5f;
     private float PlayerRun;
     private Vector2 movement;
-    internal int moveInput;
     
-
     private void Start()
     {
         Animator = GetComponent<Animator>();

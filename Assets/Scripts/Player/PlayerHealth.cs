@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health;
+    public static float currentHealth = 5;
     public float maxHealth;
 
     public Image healthBar;
-    public Animator Animator;
+    //public Animator Animator;
     public GameManagerScript gameManager;
     public GameObject weapon;
 
@@ -17,30 +17,32 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        Animator = GetComponent<Animator>();
-
-        health = maxHealth;
+        //Animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    void Update()
     {
-        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+        healthBar.fillAmount = Mathf.Clamp(currentHealth / maxHealth, 0, 1);
     }
 
     public void TakeDamage(int amount)
     {
-        health -= amount;
+        currentHealth -= amount;
         AudioManager.PlaySFX("PlayerHit");
 
-        if (health <= 0 && !isDead)
+        if (currentHealth <= 0 && !isDead)
         {
             isDead = true;
             AudioManager.PlaySFX("PlayerDeath");
             weapon.SetActive(false);
-            gameObject.SetActive(false);
             gameManager.GameOver();
             //Animator.SetTrigger("Death");
         }
+    }
+
+    public void HealDamage()
+    {
+        currentHealth = maxHealth;
     }
 
     /*public void Death()

@@ -17,8 +17,6 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource MusicSource;
 
-    //public AudioSource Player;
-
     public List<AudioSource> AudioSourcesSfx;
 
     public AudioMixer AudioMixer;

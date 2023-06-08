@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 619259034}
         m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: salir
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1258,7 +1258,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 619259034}
         m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: jugar
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2765,7 +2765,7 @@ GameObject:
   - component: {fileID: 1453697405}
   - component: {fileID: 1453697404}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: MenuMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2783,9 +2783,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ae19ce92df848f14998d78145dd5111e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 33da3c9a7f922b9448480f4f93dd90b9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1.64
-  Loop: 0
+  m_Volume: 0.3
+  m_Pitch: 1.2
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
