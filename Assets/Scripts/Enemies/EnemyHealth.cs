@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 PlayerScore.scoreValue += 50;
             }
-            
+
             isDead = true;
             bar.SetActive(false);
             Animator.SetTrigger("Death");
@@ -47,8 +47,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void Death()
     {
-        GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(gameObject);
+
+        if (gameObject.CompareTag("Enemy"))
+        {
+            GetComponent<LootBag>().InstantiateLoot(transform.position);
+        }
     }
 
     public void EnemyDeathSound()
