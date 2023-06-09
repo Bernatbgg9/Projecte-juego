@@ -136,21 +136,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.071428575
-    functionName: TurretSound
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.071428575
     functionName: ShakeExplosion
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.071428575
+    functionName: TurretSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.71428573
-    functionName: Death
+    functionName: TurretDeath
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

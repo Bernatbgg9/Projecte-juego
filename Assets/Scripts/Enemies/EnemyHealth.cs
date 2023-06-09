@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     public Animator Animator;
     public GameObject bar;
     public CameraShake cameraShake;
+    public GameObject blood;
 
     void Start()
     {
@@ -29,6 +30,10 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0 && !isDead)
         {
+            isDead = true;
+            bar.SetActive(false);
+            Animator.SetTrigger("Death");
+
             if (gameObject.CompareTag("Turret"))
             {
                 PlayerScore.scoreValue += 100;
@@ -37,16 +42,15 @@ public class EnemyHealth : MonoBehaviour
             if (gameObject.CompareTag("Enemy"))
             {
                 PlayerScore.scoreValue += 50;
+                Instantiate(blood, transform.position, Quaternion.identity);
+                EnemyDeath();
             }
-
-            isDead = true;
-            bar.SetActive(false);
-            Animator.SetTrigger("Death");
         }
     }
 
-    public void Death()
+    public void EnemyDeath()
     {
+        AudioManager.PlaySFX("EnemyDeath");
         Destroy(gameObject);
 
         if (gameObject.CompareTag("Enemy"))
@@ -55,9 +59,9 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public void EnemyDeathSound()
+    public void TurretDeath()
     {
-        AudioManager.PlaySFX("EnemyDeath");
+        Destroy(gameObject);
     }
 
     public void TurretSound()

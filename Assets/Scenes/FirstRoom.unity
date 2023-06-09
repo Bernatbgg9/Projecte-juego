@@ -22422,6 +22422,7 @@ MonoBehaviour:
   Animator: {fileID: 1958704958800195223}
   bar: {fileID: 744772352}
   cameraShake: {fileID: 0}
+  blood: {fileID: 841475139454270244, guid: feaa9a9c71650c148ababf649cd05a17, type: 3}
 --- !u!114 &1189373633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22620,6 +22621,7 @@ MonoBehaviour:
   Animator: {fileID: 1660507230}
   bar: {fileID: 1964843050}
   cameraShake: {fileID: 0}
+  blood: {fileID: 841475139454270244, guid: feaa9a9c71650c148ababf649cd05a17, type: 3}
 --- !u!1 &1300624216
 GameObject:
   m_ObjectHideFlags: 0
@@ -23020,7 +23022,7 @@ GameObject:
   - component: {fileID: 1412991828}
   m_Layer: 0
   m_Name: TurretEnemy2
-  m_TagString: Enemy
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23108,6 +23110,7 @@ MonoBehaviour:
   Animator: {fileID: 0}
   bar: {fileID: 1909525833}
   cameraShake: {fileID: 721435997}
+  blood: {fileID: 0}
 --- !u!95 &1412991827
 Animator:
   serializedVersion: 5
@@ -23619,6 +23622,7 @@ GameObject:
   - component: {fileID: 1660507234}
   - component: {fileID: 1272982344}
   - component: {fileID: 1272982349}
+  - component: {fileID: 1660507236}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -23754,6 +23758,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1660507236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660507229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11eb8c1e79b4974c8b0ccb7a5ebbf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 1835019583710937064, guid: 7c8bd03dd3e8ba649a6bb8ec32e119cb, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: e09986fcbd508d1489aefa06dfb85ea1, type: 2}
 --- !u!1 &1697828361
 GameObject:
   m_ObjectHideFlags: 0
@@ -25377,7 +25396,7 @@ GameObject:
   - component: {fileID: 2006835609}
   m_Layer: 0
   m_Name: TurretEnemy1
-  m_TagString: Enemy
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25418,6 +25437,7 @@ MonoBehaviour:
   Animator: {fileID: 0}
   bar: {fileID: 1140923037}
   cameraShake: {fileID: 721435997}
+  blood: {fileID: 0}
 --- !u!61 &2006835604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26348,6 +26368,7 @@ GameObject:
   - component: {fileID: 1958704958800195243}
   - component: {fileID: 1177915254}
   - component: {fileID: 1177915264}
+  - component: {fileID: 1958704958800195244}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -26482,3 +26503,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0078027053, y: -0.024109602}
   m_Size: {x: 0.14800863, y: 0.22618167}
   m_Direction: 0
+--- !u!114 &1958704958800195244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958704958800195220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11eb8c1e79b4974c8b0ccb7a5ebbf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 1835019583710937064, guid: 7c8bd03dd3e8ba649a6bb8ec32e119cb, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: e09986fcbd508d1489aefa06dfb85ea1, type: 2}
