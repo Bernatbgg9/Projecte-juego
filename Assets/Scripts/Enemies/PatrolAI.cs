@@ -141,7 +141,7 @@ public class PatrolAI : MonoBehaviour
         Animator.SetFloat("Vertical", direction.y);
         Animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(0.8f);
-        brain.ChangeState(EState.Patrol);
+        brain.ChangeState(EState.Follow);
         Animator.SetBool("isAttacking", false);
     }
 

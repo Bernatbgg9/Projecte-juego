@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour
 
     public EnemyHealthBar healthBar;
     public Animator Animator;
-    public GameObject Bar;
+    public GameObject bar;
     public CameraShake cameraShake;
 
     void Start()
@@ -40,13 +40,14 @@ public class EnemyHealth : MonoBehaviour
             }
             
             isDead = true;
-            Bar.SetActive(false);
+            bar.SetActive(false);
             Animator.SetTrigger("Death");
         }
     }
 
     public void Death()
     {
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(gameObject);
     }
 
@@ -58,6 +59,11 @@ public class EnemyHealth : MonoBehaviour
     public void TurretSound()
     {
         AudioManager.PlaySFX("TurretExplosion");
+    }
+
+    public void KnifeSound()
+    {
+        AudioManager.PlaySFX("KnifeSound");
     }
 
     public void ShakeExplosion()

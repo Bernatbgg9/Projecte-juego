@@ -6,8 +6,8 @@ public class TurretBullet : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
-    public float speed;
 
+    public float speed;
     private float timer;
 
     void Start()

@@ -65,4 +65,13 @@ public class PlayerMovement : MonoBehaviour
             rb.MovePosition(rb.position + movement.normalized * PlayerSpeed * Time.fixedDeltaTime);
         }
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Loot"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().Heal(1);
+            Destroy(gameObject);
+        }
+    }*/
 }

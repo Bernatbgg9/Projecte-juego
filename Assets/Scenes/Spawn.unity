@@ -10001,6 +10001,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101721223}
   m_CullTransparentMesh: 1
+--- !u!1 &152339305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152339307}
+  - component: {fileID: 152339306}
+  m_Layer: 0
+  m_Name: Sfx6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &152339306
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152339305}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 7879215743920592412, guid: ae19ce92df848f14998d78145dd5111e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &152339307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152339305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 172962675}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172962674
 GameObject:
   m_ObjectHideFlags: 0
@@ -10036,6 +10164,7 @@ Transform:
   - {fileID: 196669978}
   - {fileID: 1524940960}
   - {fileID: 1444383587}
+  - {fileID: 152339307}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10083,6 +10212,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
     Volume: 0.2
     Type: 1
+  - Name: KnifeSound
+    Clips:
+    - {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+    Volume: 0.1
+    Type: 1
   MusicSource: {fileID: 904723825}
   AudioSourcesSfx:
   - {fileID: 1654134302}
@@ -10090,6 +10224,7 @@ MonoBehaviour:
   - {fileID: 196669977}
   - {fileID: 1524940961}
   - {fileID: 1444383588}
+  - {fileID: 152339306}
   AudioMixer: {fileID: 24100000, guid: ae19ce92df848f14998d78145dd5111e, type: 2}
   GlobalMusicVolume: 0.1
   GlobalSFXVolume: 1
@@ -31106,7 +31241,7 @@ GameObject:
   - component: {fileID: 1189373635}
   - component: {fileID: 1189373633}
   m_Layer: 0
-  m_Name: EnemyHealthBar3
+  m_Name: TurretHealthBar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31144,11 +31279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb474ae7d946ca449c414d3354a7fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
-  currentHealth: 4
+  maxHealth: 5
+  currentHealth: 5
   healthBar: {fileID: 2118713476}
   Animator: {fileID: 1958704958800195223}
-  Bar: {fileID: 744772352}
+  bar: {fileID: 744772352}
   cameraShake: {fileID: 0}
 --- !u!114 &1189373633
 MonoBehaviour:
@@ -31329,11 +31464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionZone: {fileID: 865045900}
-  players:
-    serializedVersion: 2
-    m_Bits: 8
   moveSpeed: 1
-  radius: 0.09
 --- !u!114 &1272982349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31346,11 +31477,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb474ae7d946ca449c414d3354a7fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
-  currentHealth: 4
+  maxHealth: 5
+  currentHealth: 5
   healthBar: {fileID: 1964843051}
   Animator: {fileID: 1660507230}
-  Bar: {fileID: 1964843050}
+  bar: {fileID: 1964843050}
   cameraShake: {fileID: 0}
 --- !u!1 &1276971138
 GameObject:
@@ -31836,11 +31967,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1412991823}
-  - component: {fileID: 1412991827}
   - component: {fileID: 1412991824}
   - component: {fileID: 1412991825}
   - component: {fileID: 1412991826}
   - component: {fileID: 1412991828}
+  - component: {fileID: 1412991827}
   m_Layer: 0
   m_Name: TurretEnemy2
   m_TagString: Turret
@@ -31929,7 +32060,7 @@ MonoBehaviour:
   currentHealth: 5
   healthBar: {fileID: 1909525834}
   Animator: {fileID: 0}
-  Bar: {fileID: 1909525833}
+  bar: {fileID: 1909525833}
   cameraShake: {fileID: 721435997}
 --- !u!95 &1412991827
 Animator:
@@ -32667,6 +32798,7 @@ GameObject:
   - component: {fileID: 1660507234}
   - component: {fileID: 1272982344}
   - component: {fileID: 1272982349}
+  - component: {fileID: 1660507236}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -32802,6 +32934,21 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1660507236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660507229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11eb8c1e79b4974c8b0ccb7a5ebbf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 1835019583710937064, guid: 7c8bd03dd3e8ba649a6bb8ec32e119cb, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: e09986fcbd508d1489aefa06dfb85ea1, type: 2}
 --- !u!1 &1697828361
 GameObject:
   m_ObjectHideFlags: 0
@@ -33424,7 +33571,7 @@ GameObject:
   - component: {fileID: 1909525836}
   - component: {fileID: 1909525834}
   m_Layer: 0
-  m_Name: EnemyHealthBar3
+  m_Name: TurretHealthBar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34810,7 +34957,7 @@ MonoBehaviour:
   currentHealth: 5
   healthBar: {fileID: 1189373633}
   Animator: {fileID: 0}
-  Bar: {fileID: 1140923037}
+  bar: {fileID: 1140923037}
   cameraShake: {fileID: 721435997}
 --- !u!61 &2006835604
 BoxCollider2D:
@@ -35647,6 +35794,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1748035729}
     - target: {fileID: 7088295456962088208, guid: 8215f27f199ffde4ca79d1aaecdcd393, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 721435997}
+    - target: {fileID: 7088295456962088208, guid: 8215f27f199ffde4ca79d1aaecdcd393, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 283677712}
@@ -35672,6 +35823,7 @@ GameObject:
   - component: {fileID: 1958704958800195243}
   - component: {fileID: 1177915254}
   - component: {fileID: 1177915264}
+  - component: {fileID: 1958704958800195244}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -35807,6 +35959,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.014, y: -0.04}
   m_Size: {x: 0.112, y: 0.22}
   m_Direction: 0
+--- !u!114 &1958704958800195244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958704958800195220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11eb8c1e79b4974c8b0ccb7a5ebbf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 1835019583710937064, guid: 7c8bd03dd3e8ba649a6bb8ec32e119cb, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: e09986fcbd508d1489aefa06dfb85ea1, type: 2}
 --- !u!4 &4972428083893762994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4666632343962646251, guid: 8215f27f199ffde4ca79d1aaecdcd393, type: 3}

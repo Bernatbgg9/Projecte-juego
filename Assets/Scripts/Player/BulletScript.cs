@@ -7,8 +7,8 @@ public class BulletScript : MonoBehaviour
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rb;
-    public float speed;
 
+    public float speed;
     private float timer;
 
     void Start()

@@ -59,6 +59,16 @@ public class AudioManager : MonoBehaviour
         Instance._StopSFX(name);
     }
 
+    public static void PauseMusic(string name)
+    {
+        Instance._PauseMusic(name);
+    }
+
+    public static void UnPauseMusic(string name)
+    {
+        Instance._UnPauseMusic(name);
+    }
+
     public static bool IsSoundPlaying(string name)
     {
         return Instance._IsSoundPlaying(name);
@@ -90,6 +100,16 @@ public class AudioManager : MonoBehaviour
 
             }
         }
+    }
+
+    private void _PauseMusic(string name)
+    {
+        MusicSource.Pause();         
+    }
+
+    private void _UnPauseMusic(string name)
+    {
+        MusicSource.UnPause();
     }
 
     private void _PlayRandomMusic()
@@ -186,10 +206,6 @@ public class AudioFile
     [Range(0, 1)]
     public float Volume;
     public AudioType Type;
-
-
-
-
 }
 
 public enum AudioType

@@ -45,6 +45,7 @@ public class GameManagerScript : MonoBehaviour
     {
         isPaused = true;
         Time.timeScale = 0f;
+        AudioManager.PauseMusic("Music");
         gamePausedUI.SetActive(true);
         pauseButton.SetActive(false);
         minimap.SetActive(false);
@@ -55,6 +56,7 @@ public class GameManagerScript : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1f;
+        AudioManager.UnPauseMusic("Music");
         gamePausedUI.SetActive(false);
         pauseButton.SetActive(true);
         minimap.SetActive(true);
@@ -63,8 +65,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void Restart()
     {
-        player.GetComponent<PlayerHealth>().HealDamage();
         PlayerScore.scoreValue = 500;
+        player.GetComponent<PlayerHealth>().RestoreHealth();
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -72,14 +74,14 @@ public class GameManagerScript : MonoBehaviour
     public void MainMenu()
     {
         PlayerScore.scoreValue = 500;
-        player.GetComponent<PlayerHealth>().HealDamage();
+        player.GetComponent<PlayerHealth>().RestoreHealth();
         SceneManager.LoadScene("InicMenu");
     }
 
     public void Quit()
     {
         PlayerScore.scoreValue = 500;
-        player.GetComponent<PlayerHealth>().HealDamage();
+        player.GetComponent<PlayerHealth>().RestoreHealth();
         SceneManager.LoadScene("InicMenu");
         //Application.Quit();
     }

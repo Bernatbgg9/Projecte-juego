@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,7 +41,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void HealDamage()
+    public void Heal(int amount)
+    {
+        currentHealth = currentHealth + amount;
+    }
+
+    public void RestoreHealth()
     {
         currentHealth = maxHealth;
     }

@@ -19,10 +19,9 @@ public class EnemyAI : MonoBehaviour
     public DetectionZone detectionZone;
     Animator Animator;
     Rigidbody2D rb;
-    public LayerMask players;
+
     public float moveSpeed;
     bool running = false;
-    public float radius;
 
     private void Start()
     {
@@ -109,7 +108,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator changeDirection()
     {
         running = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3f);
         direction.x = Random.Range(-2.0f, 2.0f);
         direction.y = Random.Range(-2.0f, 2.0f);
         running = false;

@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Teleporter
   - Enemy
   - Wall
   - Weapon
   - Sfx
   - Turret
+  - Loot
   layers:
   - Default
   - TransparentFX
