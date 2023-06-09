@@ -137,8 +137,10 @@ public class PatrolAI : MonoBehaviour
 
     IEnumerator AttackCo()
     {
+        Animator.SetFloat("Horizontal", direction.x);
+        Animator.SetFloat("Vertical", direction.y);
         Animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         brain.ChangeState(EState.Patrol);
         Animator.SetBool("isAttacking", false);
     }

@@ -153,7 +153,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator AttackCo()
     {
         Animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         brain.ChangeState(EState.Wander);
         Animator.SetBool("isAttacking", false);
     }

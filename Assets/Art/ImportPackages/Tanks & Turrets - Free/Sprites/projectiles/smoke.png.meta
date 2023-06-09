@@ -206,6 +206,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -535,21 +547,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      smoke_sprite_sheet_5: -7629833008273187850
-      smoke_sprite_sheet_6: 850106608973092342
-      smoke_sprite_sheet_14: -4024266764126116404
-      smoke_sprite_sheet_9: 7780953720765388412
-      smoke_sprite_sheet_13: 3537774305963712459
-      smoke_sprite_sheet_8: 7797697305439537927
-      smoke_sprite_sheet_10: 569096499034068590
       smoke_sprite_sheet_0: 3109862550668250299
-      smoke_sprite_sheet_7: -6569648518330858412
+      smoke_sprite_sheet_1: -1928452630774268531
+      smoke_sprite_sheet_10: 569096499034068590
+      smoke_sprite_sheet_11: -6852060980020717717
       smoke_sprite_sheet_12: 2218420401518224628
+      smoke_sprite_sheet_13: 3537774305963712459
+      smoke_sprite_sheet_14: -4024266764126116404
       smoke_sprite_sheet_2: -831860869051309597
       smoke_sprite_sheet_3: -4847895452887732751
-      smoke_sprite_sheet_11: -6852060980020717717
-      smoke_sprite_sheet_1: -1928452630774268531
       smoke_sprite_sheet_4: 3529767494947316314
+      smoke_sprite_sheet_5: -7629833008273187850
+      smoke_sprite_sheet_6: 850106608973092342
+      smoke_sprite_sheet_7: -6569648518330858412
+      smoke_sprite_sheet_8: 7797697305439537927
+      smoke_sprite_sheet_9: 7780953720765388412
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
