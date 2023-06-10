@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,7 +23,15 @@ public class PlayerMovement : MonoBehaviour
 
         AudioManager.PlayRandomMusic();
 
-        transform.position = startingPos.initialValue;
+        if (SceneManager.GetActiveScene().name == "Spawn")
+        {
+            transform.position = startingPos.spawnValue;
+        }
+
+        if (SceneManager.GetActiveScene().name == "FirstRoom")
+        {
+            transform.position = startingPos.firstRoomValue;
+        }
     }
 
     void Update()

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class VectorValue : ScriptableObject, ISerializationCallbackReceiver
+public class VectorValue : ScriptableObject //,ISerializationCallbackReceiver
 {
-    public Vector2 initialValue;
-    public Vector2 defaultValue;
+    public Vector2 spawnValue;
+    public Vector2 firstRoomValue;
 
-    public void OnAfterDeserialize()
+    /*public void OnAfterDeserialize()
     {
         initialValue = defaultValue;
     }
 
     public void OnBeforeSerialize() 
     {
-    }
+    }*/
 }

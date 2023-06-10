@@ -47,5 +47,15 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        /*
+         switch(collision.gameObject.tag)
+        {
+            case "Enemy":
+                break;
+            case "Wall":
+                break;
+        }
+         */
     }
 }

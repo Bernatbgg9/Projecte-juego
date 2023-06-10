@@ -8,15 +8,15 @@ public class LevelMover : MonoBehaviour
     //public int sceneBuildIndex;
     public string sceneToLoad;
     public Vector2 playerPos;
-    public VectorValue playerStorage;
 
+    public VectorValue playerStorage;
     public Animator transitionAnim;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            playerStorage.initialValue = playerPos;
+            //playerStorage.spawnValue = playerPos;
             StartCoroutine(LoadScene());
         }
     }

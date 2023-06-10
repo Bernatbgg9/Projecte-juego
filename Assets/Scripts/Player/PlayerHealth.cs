@@ -43,7 +43,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(int amount)
     {
-        currentHealth = currentHealth + amount;
+        if (currentHealth <= 4)
+        {
+            currentHealth = currentHealth + amount;
+        }
     }
 
     public void RestoreHealth()
