@@ -57,9 +57,4 @@ public class PlayerHealth : MonoBehaviour
         AudioManager.PlaySFX("PlayerDeath");
         gameManager.GameOver();
     }
-
-    public void ScreenShake()
-    {
-        
-    }
 }
