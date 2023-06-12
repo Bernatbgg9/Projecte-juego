@@ -74,6 +74,7 @@ public class GameManagerScript : MonoBehaviour
     public void MainMenu()
     {
         PlayerScore.scoreValue = 500;
+        Time.timeScale = 1f;
         player.GetComponent<PlayerHealth>().RestoreHealth();
         SceneManager.LoadScene("InicMenu");
     }
@@ -81,6 +82,7 @@ public class GameManagerScript : MonoBehaviour
     public void Quit()
     {
         PlayerScore.scoreValue = 500;
+        Time.timeScale = 1f;
         player.GetComponent<PlayerHealth>().RestoreHealth();
         SceneManager.LoadScene("InicMenu");
         //Application.Quit();

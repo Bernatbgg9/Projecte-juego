@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private ParticleSystem Dust;
     public AudioSource Steps;
     public VectorValue startingPos;
+    public SpriteRenderer playerRenderer;
 
     public float PlayerSpeed = 1.5f;
     private float PlayerRun;
     private Vector2 movement;
+    private bool facingRight = true;
     
     private void Start()
     {
@@ -59,6 +61,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (movement.x > 0 && !facingRight)
+        {
+            Flip();
+        }
+
+        if (movement.x < 0 && facingRight)
+        {
+            Flip();
+        }
+
         Run();
     }
 
@@ -75,12 +87,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void Flip()
     {
-        if (collision.gameObject.CompareTag("Loot"))
-        {
-            collision.gameObject.GetComponent<PlayerHealth>().Heal(1);
-            Destroy(gameObject);
-        }
-    }*/
+        /*Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;*/
+
+        playerRenderer.flipX = facingRight;
+        facingRight = !facingRight;
+    }
 }

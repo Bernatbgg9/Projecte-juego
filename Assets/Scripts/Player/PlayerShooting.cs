@@ -8,7 +8,7 @@ public class PlayerShooting : MonoBehaviour
     private Vector3 mousePos;
     public GameObject bullet;
     public Transform bulletTransform;
-    private SpriteRenderer weapon;
+    private SpriteRenderer weaponRenderer;
     public Animator Animator;
     //[SerializeField] private ParticleSystem ShootParticle;
 
@@ -19,7 +19,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        weapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<SpriteRenderer>();
+        weaponRenderer = GameObject.FindGameObjectWithTag("Weapon").GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -32,13 +32,21 @@ public class PlayerShooting : MonoBehaviour
 
         if (rotZ >= 90 || rotZ <= -90)
         {
-            weapon.flipY = true;
+            weaponRenderer.flipY = true;
         }
-
         else
         {
-            weapon.flipY = false;
+            weaponRenderer.flipY = false;
         }
+
+        /*if (transform.eulerAngles.z > 0 && transform.eulerAngles.z < 180)
+        {
+            weaponRenderer.sortingOrder = -1;
+        }
+        else
+        {
+            weaponRenderer.sortingOrder = 1;
+        }*/
 
         if (!canFire)
         {
