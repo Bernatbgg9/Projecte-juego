@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private ParticleSystem Dust;
     public AudioSource Steps;
     public VectorValue startingPos;
-    public SpriteRenderer playerRenderer;
+    private SpriteRenderer playerRenderer;
 
     public float PlayerSpeed = 1.5f;
     private float PlayerRun;
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Steps = GetComponent<AudioSource>();
+        playerRenderer = GetComponent<SpriteRenderer>();
 
         AudioManager.PlayRandomMusic();
 
