@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6226806346604203891}
   - component: {fileID: 382507421774457854}
   m_Layer: 0
-  m_Name: LootPrefab
-  m_TagString: Loot
+  m_Name: WeaponPrefab
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,5 +148,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.15}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0

@@ -90,10 +90,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        /*Vector3 currentScale = transform.localScale;
-        currentScale.x *= -1;
-        transform.localScale = currentScale;*/
-
         playerRenderer.flipX = facingRight;
         facingRight = !facingRight;
     }
