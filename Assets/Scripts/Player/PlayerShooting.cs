@@ -6,7 +6,8 @@ public class PlayerShooting : MonoBehaviour
 {
     private Camera mainCam;
     private Vector3 mousePos;
-    public GameObject bullet;
+    public GameObject m4Bullet;
+    public GameObject pistolBullet;
     public Transform bulletTransform;
     private SpriteRenderer weaponRenderer;
     public Animator Animator;
@@ -59,14 +60,14 @@ public class PlayerShooting : MonoBehaviour
             if (m4.activeInHierarchy)
             {
                 AudioManager.PlaySFX("M4");
+                Instantiate(m4Bullet, bulletTransform.position, Quaternion.identity);
             }
 
             if (pistol.activeInHierarchy)
             {
                 AudioManager.PlaySFX("Pistol");
+                Instantiate(pistolBullet, bulletTransform.position, pistolBullet.transform.rotation);
             }
-            
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             Animator.SetTrigger("NoFlash");
         }
     }

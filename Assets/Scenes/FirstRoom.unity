@@ -59375,7 +59375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cae60d4c1641ef4e8532ea47451c1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7205450661031792541, guid: b249b6637afba4449a133f449428e824, type: 3}
+  m4Bullet: {fileID: 7205450661031792541, guid: b249b6637afba4449a133f449428e824, type: 3}
+  pistolBullet: {fileID: 7205450661031792541, guid: 9cdd3d46f0f33124baf8c0fa470c7396, type: 3}
   bulletTransform: {fileID: 1619938680347715348}
   Animator: {fileID: 2540114569562533317}
   m4: {fileID: 1545578813164510660}
