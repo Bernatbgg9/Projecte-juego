@@ -10,6 +10,7 @@ TagManager:
   - Sfx
   - Turret
   - Loot
+  - Pistol
   layers:
   - Default
   - TransparentFX

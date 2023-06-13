@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class HandleLoot : MonoBehaviour
 {
-    public GameObject m4;
-    public GameObject pistol;
+    //public GameObject m4;
+    //public GameObject pistol;
+    PlayerShooting playerShooting;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
+    {
+        playerShooting = GetComponentInChildren<PlayerShooting>();
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Weapon"))
-        {          
+        {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("ey");
-                m4.SetActive(false);
-                pistol.SetActive(true);
+                playerShooting.ChangeWeapon();
                 Destroy(collision.gameObject);
             }
         }

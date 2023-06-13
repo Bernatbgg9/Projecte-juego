@@ -10,7 +10,8 @@ public class PlayerShooting : MonoBehaviour
     public Transform bulletTransform;
     private SpriteRenderer weaponRenderer;
     public Animator Animator;
-    //[SerializeField] private ParticleSystem ShootParticle;
+    public GameObject m4;
+    public GameObject pistol;
 
     public bool canFire;
     private float timer;
@@ -39,15 +40,6 @@ public class PlayerShooting : MonoBehaviour
             weaponRenderer.flipY = false;
         }
 
-        /*if (transform.eulerAngles.z > 0 && transform.eulerAngles.z < 180)
-        {
-            weaponRenderer.sortingOrder = -1;
-        }
-        else
-        {
-            weaponRenderer.sortingOrder = 1;
-        }*/
-
         if (!canFire)
         {
             timer += Time.deltaTime;
@@ -63,9 +55,26 @@ public class PlayerShooting : MonoBehaviour
         {
             canFire = false;
             Animator.SetTrigger("Flash");
-            AudioManager.PlaySFX("M4");
+
+            if (m4.activeInHierarchy)
+            {
+                AudioManager.PlaySFX("M4");
+            }
+
+            if (pistol.activeInHierarchy)
+            {
+                AudioManager.PlaySFX("Pistol");
+            }
+            
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
             Animator.SetTrigger("NoFlash");
         }
+    }
+
+    public void ChangeWeapon()
+    {
+        m4.SetActive(false);
+        pistol.SetActive(true);
+        weaponRenderer = GameObject.FindGameObjectWithTag("Pistol").GetComponent<SpriteRenderer>();
     }
 }

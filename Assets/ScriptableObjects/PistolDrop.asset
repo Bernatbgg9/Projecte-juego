@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fad1e4680d5e34c8b173bcd894d5ce, type: 3}
   m_Name: PistolDrop
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 21300000, guid: 47b1e40bd7f8f0c4ca09c7b5927a7747, type: 3}
+  lootSprite: {fileID: 2095585554, guid: 0ca9676987c7a034aa6d9c8f21dd46b7, type: 3}
   lootName: Pistol
   dropChance: 100
