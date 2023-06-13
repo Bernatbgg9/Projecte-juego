@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public GameManagerScript gameManager;
     public CameraShake cameraShake;
     public GameObject weapon;
+    public GameObject healingEffect;
 
     private bool isDead;
 
@@ -45,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth <= 4)
         {
+            Instantiate(healingEffect, transform.position, Quaternion.identity);
             currentHealth = currentHealth + amount;
         }
     }
