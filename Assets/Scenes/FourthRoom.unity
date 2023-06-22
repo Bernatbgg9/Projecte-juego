@@ -6733,8 +6733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2112172550}
   smoothSpeed: 0.2
-  minValues: {x: -0.11, y: -3.62, z: -5}
-  maxValues: {x: 11.24, y: 1.17, z: -5}
+  minValues: {x: -1, y: -1, z: -5}
+  maxValues: {x: 9, y: 10.3, z: -5}
 --- !u!114 &1342210966
 MonoBehaviour:
   m_ObjectHideFlags: 0
