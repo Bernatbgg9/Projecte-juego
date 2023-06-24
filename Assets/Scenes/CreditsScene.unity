@@ -781,10 +781,10 @@ AudioSource:
   m_GameObject: {fileID: 1819347113}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ae19ce92df848f14998d78145dd5111e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: a979641cf2bc0854f80aa7c567e46ff7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -956,10 +956,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'CONGRATULATIONS! THE GAME IS OVER!
 
-    
 
-    WE HOPE YOU ENJOYED IT
-    AS MUCH AS WE DID MAKING IT!'
+
+    WE HOPE YOU ENJOYED IT AS MUCH
+    AS WE DID MAKING IT!'
 --- !u!222 &2057715258
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -2764,6 +2764,11 @@ Transform:
   m_Father: {fileID: 51245433}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1246808777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3396538092250719215, guid: 8215f27f199ffde4ca79d1aaecdcd393, type: 3}
+  m_PrefabInstance: {fileID: 1860506901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1482691642
 GameObject:
   m_ObjectHideFlags: 0
@@ -41028,13 +41033,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb21777ed69a21540a2fb1f8fe7baaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 0}
-  gamePausedUI: {fileID: 0}
-  pauseButton: {fileID: 0}
-  healthBar: {fileID: 0}
-  minimap: {fileID: 0}
-  score: {fileID: 0}
-  player: {fileID: 0}
+  gameOverUI: {fileID: 802163335}
+  gamePausedUI: {fileID: 765925115}
+  pauseButton: {fileID: 418119489}
+  healthBar: {fileID: 1516001946}
+  minimap: {fileID: 945679619}
+  score: {fileID: 203735308}
+  player: {fileID: 1246808777}
 --- !u!4 &1636060009
 Transform:
   m_ObjectHideFlags: 0
