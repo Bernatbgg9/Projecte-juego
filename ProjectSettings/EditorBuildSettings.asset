@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FourthRoom.unity
     guid: 619d541a32b8b9345a35e4d9c22c73fa
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 93972de4cdfc0d44fade897044ce087a
   m_configObjects: {}
