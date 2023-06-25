@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7, y: -44}
+  m_AnchoredPosition: {x: 4.7, y: -51.500004}
   m_SizeDelta: {x: 38, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149850546
@@ -1209,7 +1209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7000084, y: 0}
+  m_AnchoredPosition: {x: 4.7000084, y: -7.5}
   m_SizeDelta: {x: 46, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853590153
@@ -1842,7 +1842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7000084, y: -22}
+  m_AnchoredPosition: {x: 4.7000084, y: -29.500004}
   m_SizeDelta: {x: 69, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &924610274
@@ -3333,8 +3333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7, y: 30.600004}
-  m_SizeDelta: {x: 82.0573, y: 30}
+  m_AnchoredPosition: {x: 3, y: 30}
+  m_SizeDelta: {x: 160.8552, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1602853928
 MonoBehaviour:
@@ -3358,7 +3358,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ae9722753a0a488488f6f4affcd0bdc9, type: 3}
-    m_FontSize: 22
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -3369,7 +3369,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MENU
+  m_Text: GAME NAME
 --- !u!222 &1602853929
 CanvasRenderer:
   m_ObjectHideFlags: 0
